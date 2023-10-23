@@ -22,12 +22,21 @@ To utilize the calender app, simply input information into the text area followi
 
 UCONN Coding Bootcamp Student - Nicole Choiniere-Kroeker (nchoin)
 
-
 # Links to online resources
 
 ChatGPT 3.5 - https://www.chat.openai.com/
 
 W3Schools - https://www.w3schools.com/
+
+DayJS - https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js
+
+JQuery - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+
+Bootstrap - https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css
+
+Font Awesome - https://use.fontawesome.com/releases/v5.8.1/css/all.css
+
+Google Fonts - https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap
 
 
 ## License
