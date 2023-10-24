@@ -22,6 +22,8 @@ To utilize the calender app, simply input information into the text area followi
 
 UCONN Coding Bootcamp Student - Nicole Choiniere-Kroeker (nchoin)
 
+UCONN Coding Bootcamp Tutor - Ramon Sanchez
+
 # Links to online resources
 
 ChatGPT 3.5 - https://www.chat.openai.com/
