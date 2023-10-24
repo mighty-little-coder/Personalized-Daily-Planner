@@ -1,5 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the html.
-
 var rightNow = $('#currentDay');
 var timePast = $('past');
 var timePresent = $('present');
@@ -14,19 +12,42 @@ var pm3 = $('#hour-3');
 var pm4 = $('#hour-4');
 var pm5 = $('#hour-5');
 var hourX = dayjs().format('H');
-var time9 = hourX[9];
-var time10 = hourX[10];
-var time11 = hourX[11];
-var time12 = hourX[12];
-var time1 = hourX[1];
-var time2 = hourX[2];
-var time3 = hourX[3];
-var time4 = hourX[4];
-var time5 = hourX[5];
+
+// These variables are meant to try and condense all the separated functions into one, concise function.
+
+// var time9 = hourX[9];
+// var time10 = hourX[10];
+// var time11 = hourX[11];
+// var time12 = hourX[12];
+// var time1 = hourX[1];
+// var time2 = hourX[2];
+// var time3 = hourX[3];
+// var time4 = hourX[4];
+// var time5 = hourX[5];
+// var newHourEvent = `hour${hour}Event`
+// var hour = 0
 
 $(function () {
 
-  // TODO: Add a listener for click events on the save button. This code should use the id in the containing time-block as a key to save the user input in local storage. HINT: What does `this` reference in the click listener function? How can DOM traversal be used to get the "hour-x" id of the time-block containing the button that was clicked? How might the id be useful when saving the description in local storage?
+// This code is meant to try and condense all the separated functions into one, concise function.
+
+  // for(i = 9; i <= 17; i++) {
+  //   console.log(`hour${hour + i}Event`);
+  //   var event = document.getElementById(`hour${hour + i}Event`);
+  //   var display = document.getElementById(`displayHour${hour + i}Events`);
+  //   var saveHrBtn = document.getElementById(`hour${hour + i}Btn`);
+  //   saveHrBtn.addEventListener('click', function () {
+  //     window.localStorage.setItem(i++ + 'oclock', display.value);
+  //   });
+  //   var storedEvent = localStorage.getItem(i++ + 'oclock');
+  //   var eventInput = event;
+  //   eventInput.value = storedEvent;
+
+  //   // event.value = "test";
+  //   console.log(event)
+  // }
+
+
   // Hour 9 input
   var displayHour9Events = document.getElementById('hour9Event');
   document.getElementById('hour9Btn').addEventListener('click', function () {
@@ -108,59 +129,65 @@ $(function () {
   var eventInput = document.getElementById('hour17Event');
   eventInput.value = storedEvent;
 
-  // Hour 18 input
-  var displayHour18Events = document.getElementById('hour18Event');
-  document.getElementById('hour18Btn').addEventListener('click', function () {
-    window.localStorage.setItem('6pm oclock', displayHour18Events.value);
-  });
-  var storedEvent = localStorage.getItem('6pm oclock');
-  var eventInput = document.getElementById('hour18Event');
-  eventInput.value = storedEvent;
 
-  // Hour 19 input
-  var displayHour19Events = document.getElementById('hour19Event');
-  document.getElementById('hour19Btn').addEventListener('click', function () {
-    window.localStorage.setItem('7pm oclock', displayHour19Events.value);
-  });
-  var storedEvent = localStorage.getItem('7pm oclock');
-  var eventInput = document.getElementById('hour19Event');
-  eventInput.value = storedEvent;
 
-  // Hour 20 input
-  var displayHour20Events = document.getElementById('hour20Event');
-  document.getElementById('hour20Btn').addEventListener('click', function () {
-    window.localStorage.setItem('8pm oclock', displayHour20Events.value);
-  });
-  var storedEvent = localStorage.getItem('8pm oclock');
-  var eventInput = document.getElementById('hour20Event');
-  eventInput.value = storedEvent;
+  // This code is meant to test extra hours. Used to verify the time slot i was working in during the build of this app
 
-  // Hour 21 input
-  var displayHour21Events = document.getElementById('hour21Event');
-  document.getElementById('hour21Btn').addEventListener('click', function () {
-    window.localStorage.setItem('9pm oclock', displayHour21Events.value);
-  });
-  var storedEvent = localStorage.getItem('9pm oclock');
-  var eventInput = document.getElementById('hour21Event');
-  eventInput.value = storedEvent;
+  // // Hour 18 input
+  // var displayHour18Events = document.getElementById('hour18Event');
+  // document.getElementById('hour18Btn').addEventListener('click', function () {
+  //   window.localStorage.setItem('6pm oclock', displayHour18Events.value);
+  // });
+  // var storedEvent = localStorage.getItem('6pm oclock');
+  // var eventInput = document.getElementById('hour18Event');
+  // eventInput.value = storedEvent;
 
-  // Hour 22 input
-  var displayHour22Events = document.getElementById('hour22Event');
-  document.getElementById('hour22Btn').addEventListener('click', function () {
-    window.localStorage.setItem('10pm oclock', displayHour22Events.value);
-  });
-  var storedEvent = localStorage.getItem('10pm oclock');
-  var eventInput = document.getElementById('hour22Event');
-  eventInput.value = storedEvent;
+  // // Hour 19 input
+  // var displayHour19Events = document.getElementById('hour19Event');
+  // document.getElementById('hour19Btn').addEventListener('click', function () {
+  //   window.localStorage.setItem('7pm oclock', displayHour19Events.value);
+  // });
+  // var storedEvent = localStorage.getItem('7pm oclock');
+  // var eventInput = document.getElementById('hour19Event');
+  // eventInput.value = storedEvent;
 
-  // Hour 23 input
-  var displayHour23Events = document.getElementById('hour23Event');
-  document.getElementById('hour23Btn').addEventListener('click', function () {
-    window.localStorage.setItem('11pm oclock', displayHour23Events.value);
-  });
-  var storedEvent = localStorage.getItem('11pm oclock');
-  var eventInput = document.getElementById('hour23Event');
-  eventInput.value = storedEvent;
+  // // Hour 20 input
+  // var displayHour20Events = document.getElementById('hour20Event');
+  // document.getElementById('hour20Btn').addEventListener('click', function () {
+  //   window.localStorage.setItem('8pm oclock', displayHour20Events.value);
+  // });
+  // var storedEvent = localStorage.getItem('8pm oclock');
+  // var eventInput = document.getElementById('hour20Event');
+  // eventInput.value = storedEvent;
+
+  // // Hour 21 input
+  // var displayHour21Events = document.getElementById('hour21Event');
+  // document.getElementById('hour21Btn').addEventListener('click', function () {
+  //   window.localStorage.setItem('9pm oclock', displayHour21Events.value);
+  // });
+  // var storedEvent = localStorage.getItem('9pm oclock');
+  // var eventInput = document.getElementById('hour21Event');
+  // eventInput.value = storedEvent;
+
+  // // Hour 22 input
+  // var displayHour22Events = document.getElementById('hour22Event');
+  // document.getElementById('hour22Btn').addEventListener('click', function () {
+  //   window.localStorage.setItem('10pm oclock', displayHour22Events.value);
+  // });
+  // var storedEvent = localStorage.getItem('10pm oclock');
+  // var eventInput = document.getElementById('hour22Event');
+  // eventInput.value = storedEvent;
+
+  // // Hour 23 input
+  // var displayHour23Events = document.getElementById('hour23Event');
+  // document.getElementById('hour23Btn').addEventListener('click', function () {
+  //   window.localStorage.setItem('11pm oclock', displayHour23Events.value);
+  // });
+  // var storedEvent = localStorage.getItem('11pm oclock');
+  // var eventInput = document.getElementById('hour23Event');
+  // eventInput.value = storedEvent;
+
+
 
   // TODO: Add code to apply the past, present, or future class to each time block by comparing the id to the current hour. HINTS: How can the id attribute of each time-block be used to conditionally add or remove the past, present, and future classes? How can Day.js be used to get the current hour in 24-hour time?
   if (hourX > 9) {
@@ -262,71 +289,74 @@ $(function () {
     console.log("It's before 5")
   }
 
-  if (hourX > 18) {
-    $('#hour-18').addClass('past')
-    console.log("It's past 6")
-  } else if (hourX == 18) {
-    $('#hour-18').addClass('present')
-    console.log("It's 6!")
-  } else {
-    $('#hour-18').addClass('future')
-    console.log("It's before 6")
-  }
 
-  if (hourX > 19) {
-    $('#hour-19').addClass('past')
-    console.log("It's past 7")
-  } else if (hourX == 19) {
-    $('#hour-19').addClass('present')
-    console.log("It's 7!")
-  } else {
-    $('#hour-19').addClass('future')
-    console.log("It's before 7")
-  }
+// This code is meant to test extra hours. Used to verify the time slot i was working in during the build of this app
 
-  if (hourX > 20) {
-    $('#hour-20').addClass('past')
-    console.log("It's past 8")
-  } else if (hourX == 20) {
-    $('#hour-20').addClass('present')
-    console.log("It's 8!")
-  } else {
-    $('#hour-20').addClass('future')
-    console.log("It's before 8")
-  }
+  // if (hourX > 18) {
+  //   $('#hour-18').addClass('past')
+  //   console.log("It's past 6")
+  // } else if (hourX == 18) {
+  //   $('#hour-18').addClass('present')
+  //   console.log("It's 6!")
+  // } else {
+  //   $('#hour-18').addClass('future')
+  //   console.log("It's before 6")
+  // }
 
-  if (hourX > 21) {
-    $('#hour-21').addClass('past')
-    console.log("It's past 9")
-  } else if (hourX == 21) {
-    $('#hour-21').addClass('present')
-    console.log("It's 9!")
-  } else {
-    $('#hour-21').addClass('future')
-    console.log("It's before 9")
-  }
+  // if (hourX > 19) {
+  //   $('#hour-19').addClass('past')
+  //   console.log("It's past 7")
+  // } else if (hourX == 19) {
+  //   $('#hour-19').addClass('present')
+  //   console.log("It's 7!")
+  // } else {
+  //   $('#hour-19').addClass('future')
+  //   console.log("It's before 7")
+  // }
 
-  if (hourX > 22) {
-    $('#hour-22').addClass('past')
-    console.log("It's past 10")
-  } else if (hourX == 22) {
-    $('#hour-22').addClass('present')
-    console.log("It's 10!")
-  } else {
-    $('#hour-22').addClass('future')
-    console.log("It's before 10")
-  }
+  // if (hourX > 20) {
+  //   $('#hour-20').addClass('past')
+  //   console.log("It's past 8")
+  // } else if (hourX == 20) {
+  //   $('#hour-20').addClass('present')
+  //   console.log("It's 8!")
+  // } else {
+  //   $('#hour-20').addClass('future')
+  //   console.log("It's before 8")
+  // }
 
-  if (hourX > 23) {
-    $('#hour-23').addClass('past')
-    console.log("It's past 11")
-  } else if (hourX == 23) {
-    $('#hour-23').addClass('present')
-    console.log("It's 11!")
-  } else {
-    $('#hour-23').addClass('future')
-    console.log("It's before 11")
-  }
+  // if (hourX > 21) {
+  //   $('#hour-21').addClass('past')
+  //   console.log("It's past 9")
+  // } else if (hourX == 21) {
+  //   $('#hour-21').addClass('present')
+  //   console.log("It's 9!")
+  // } else {
+  //   $('#hour-21').addClass('future')
+  //   console.log("It's before 9")
+  // }
+
+  // if (hourX > 22) {
+  //   $('#hour-22').addClass('past')
+  //   console.log("It's past 10")
+  // } else if (hourX == 22) {
+  //   $('#hour-22').addClass('present')
+  //   console.log("It's 10!")
+  // } else {
+  //   $('#hour-22').addClass('future')
+  //   console.log("It's before 10")
+  // }
+
+  // if (hourX > 23) {
+  //   $('#hour-23').addClass('past')
+  //   console.log("It's past 11")
+  // } else if (hourX == 23) {
+  //   $('#hour-23').addClass('present')
+  //   console.log("It's 11!")
+  // } else {
+  //   $('#hour-23').addClass('future')
+  //   console.log("It's before 11")
+  // }
 
   // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements. HINT: How can the id attribute of each time-block be used to do this?
 
@@ -341,8 +371,8 @@ $(function () {
   displayTime();
   setInterval(displayTime, 1000);
 
-  // Code to refresh the page every hour to ensure the current hour is highlighted
 
+  // Code to refresh the page every hour to ensure the current hour is highlighted
   function refreshPage() {
     location.reload();
   }
@@ -369,18 +399,3 @@ function clearPage() {
   localStorage.clear();
   location.reload();
 }
-
-// dayjs.org
-// getbootstrap.com
-// jqueryui.com
-
-//   if (hourX > 17) {
-//   pm5.addClass(timePast)
-//   console.log("It's past 5")
-// } else if (hourX == 17) {
-//   pm5.addClass(timePresent)
-//   console.log("It's 5!")
-// } else {
-//   pm5.addClass(timeFuture)
-//   console.log("It's before 5")
-// }
